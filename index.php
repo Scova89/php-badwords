@@ -7,7 +7,11 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 
 <?php
     $paragrafo = 'Le strade a Roma sono davvero fatte a culo.';
+
+    $paragrafoCensurato = str_replace($_GET['culo'], '***', $paragrafo)
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +25,9 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 
     <h2>Frase non censurata</h2>
     <?php echo $paragrafo; ?>
+    <h3>La lunghezza della frase è di <?php echo strlen($paragrafo); ?> caratteri</h3>
 
+    <h2>Frase censurata</h2>
     
     
 </body>
