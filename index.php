@@ -8,7 +8,22 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 <?php
     $paragrafo = 'Le strade a Roma sono davvero fatte a culo.';
 
-    $paragrafoCensurato = str_replace("culo", "***", $paragrafo);
+    $paragrafoCensurato = str_replace($_GET['parola'], '***', $paragrafo);
+
+
+    $lista = [
+        'pane',
+        'latte',
+        'marmellata'
+    ];
+    var_dump($lista);
+    $_GET['cibo'];
+
+    if(in_array('cibo', $lista)){
+        echo 'ciao'
+    }else{
+        echo 'no'
+    };
 ?>
 
 
@@ -29,8 +44,18 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 
     <h2>Frase censurata</h2>
     <p><?php echo $paragrafoCensurato; ?></p>
-    <h3>La lunghezza della frase è di <?php echo strlen($paragrafo); ?> caratteri</h3>
+    <h3>La lunghezza della frase è di <?php echo strlen($paragrafoCensurato); ?> caratteri</h3>
     
+    <ul>
+        <?php for($i = 0; $i < count($lista); $i++){
+            echo "$lista[$i]\n";
+        }
+        ?>
+    </ul>
+
+    <script>
+        if()
+    </script>
     
 </body>
 </html>
